@@ -28,7 +28,7 @@
     	die ('Can\'t use foo : ' . mysql_error());
 	}
 
-	$result = mysql_query("select A.interestname from interestname A, interests B where B.userid='$userid'");
+	$result = mysql_query("select interestname FROM interests, interestname WHERE interests.interestID = interestname.interestID and userID = '$userid'");
 	
 	if (!$result) {
     	die('Invalid query: ' . mysql_error());
