@@ -41,9 +41,15 @@ while($row = mysqli_fetch_array($topicid))
   //ho "<br> ID:".$row['interestid'];
   //echo "<br />";
   }
- mysql_query("INSERT INTO `interestname` (`interestname`) VALUES ('$userid','$topicid1')") ;
 
-$dynaqry2 = "select interestid from interestname where interestname = '".$topic."'";
+$dynaqry2 = "INSERT INTO `interests` (userID,interestID) values('".$userid."','".$topicid1."')";
+echo $dynaqry2;
+$insert2 = mysqli_query($con,$dynaqry2);
+
+
+  //mysql_query("INSERT INTO `interests` VALUES ('$userid','$topicid1')") ;
+
+//$dynaqry2 = "select interestid from interestname where interestname = '".$topic."'";
 	if (isset($_GET['callback']))
 	{
 		$callback = filter_var($_GET['callback'], FILTER_SANITIZE_STRING);
