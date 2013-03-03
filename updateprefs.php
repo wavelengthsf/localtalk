@@ -32,10 +32,16 @@ $topicid = mysqli_query($con,$dynaqry);
 while($row = mysqli_fetch_array($topicid))
   {
   echo "<br> ID:".$row['interestid'];
+  $topicid1=$row['interestid'];
   echo "<br />";
   }
+ mysql_query("INSERT INTO `interestname` (`interestname`) VALUES ('$userid','$topicid1')") ;
+
+$dynaqry2 = "select interestid from interestname where interestname = '".$topic."'";
+
  
-mysqli_close($con);
+ mysqli_close($con);
+
 
 //mysql_query("select interestid from interestname = '$topic'");
 
