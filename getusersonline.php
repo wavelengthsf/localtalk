@@ -2,6 +2,7 @@
 
 	$mysql_user = 'test';
 	$mysql_password = 'testing123';
+	$database = 'localtalk';
 
 	$callback = '';
 	
@@ -14,6 +15,12 @@
 	
 	if (!$link) {
    	 	die('Could not connect: ' . mysql_error());
+	}
+
+	$db_selected = mysql_select_db($database, $link);
+	
+	if (!$db_selected) {
+    	die ('Can\'t use foo : ' . mysql_error());
 	}
 
 	$result = mysql_query('SELECT id, username FROM user WHERE isOnline = 1');
