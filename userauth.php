@@ -17,7 +17,7 @@ u: test
 p: testing123
 
 */
-$con=mysqli_connect("10.100.26.245","test","testing123","localtalk");
+$con=mysqli_connect("localhost","root","123not17","localtalk");
 
 
 $insertint = "select ID from User where email ='".$emailaddy."'";

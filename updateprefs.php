@@ -18,7 +18,7 @@ u: test
 p: testing123
 
 */
-$con=mysqli_connect("10.100.26.245","test","testing123","localtalk");
+$con=mysqli_connect("localhost","root","123not17","localtalk");
 
 //Writes the information to the database
 $insertint = "INSERT INTO `interestname` (`interestname`) VALUES ('$topic')";

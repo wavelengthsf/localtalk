@@ -1,7 +1,7 @@
 <?php header('content-type: application/json; charset=utf-8');
 
-	$mysql_user = 'test';
-	$mysql_password = 'testing123';
+	$mysql_user = 'root';
+	$mysql_password = '123not17';
 	$database = 'localtalk';
 
 	$callback = '';
