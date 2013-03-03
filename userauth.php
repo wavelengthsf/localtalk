@@ -11,13 +11,13 @@ if (isset($_GET['email']))
 //ho $topic;
 
 /*write user prefs to db
-10.100.26.245:3306
+ec2-50-112-223-94.us-west-2.compute.amazonaws.com:3306
 db: localtalk
 u: test
-p: testing123
+p: test12
 
 */
-$con=mysqli_connect("localhost","root","123not17","localtalk");
+$con=mysqli_connect("ec2-50-112-223-94.us-west-2.compute.amazonaws.com","root","test12","localtalk");
 
 
 $insertint = "select ID from User where email ='".$emailaddy."'";

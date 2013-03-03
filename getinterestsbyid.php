@@ -1,7 +1,7 @@
 <?php header('content-type: application/json; charset=utf-8');
 
 	$mysql_user = 'root';
-	$mysql_password = '123not17';
+	$mysql_password = 'test12';
 	$database = 'localtalk';
 
 	$callback = '';
@@ -16,7 +16,7 @@
 		$userid = $_GET['userid'];
 	}
 
-	$link = mysql_connect('localhost', $mysql_user, $mysql_password);
+	$link = mysql_connect('ec2-50-112-223-94.us-west-2.compute.amazonaws.com', $mysql_user, $mysql_password);
 	
 	if (!$link) {
    	 	die('Could not connect: ' . mysql_error());

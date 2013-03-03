@@ -12,13 +12,13 @@ if (isset($_GET['userid']))
 //ho $topic;
 
 /*write user prefs to db
-10.100.26.245:3306
+ec2-50-112-223-94.us-west-2.compute.amazonaws.com:3306
 db: localtalk
 u: test
 p: testing123
 
 */
-$con=mysqli_connect("localhost","root","123not17","localtalk");
+$con=mysqli_connect("ec2-50-112-223-94.us-west-2.compute.amazonaws.com","root","test12","localtalk");
 
 //Writes the information to the database
 $insertint = "INSERT INTO `interestname` (`interestname`) VALUES ('$topic')";
@@ -43,7 +43,7 @@ while($row = mysqli_fetch_array($topicid))
   }
 
 $dynaqry2 = "INSERT INTO `interests` (userID,interestID) values('".$userid."','".$topicid1."')";
-echo $dynaqry2;
+//echo $dynaqry2;
 $insert2 = mysqli_query($con,$dynaqry2);
 
 
