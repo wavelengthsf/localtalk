@@ -57,7 +57,9 @@ while($row = mysqli_fetch_array($userIdent))
 		$callback = filter_var($_GET['callback'], FILTER_SANITIZE_STRING);
 	}
 //$data = "Success";
-echo $callback . '('.json_encode($UID).')';
+
+
+echo "{\"uid\":\"".$UID."\"}";
 
  
  mysqli_close($con);
