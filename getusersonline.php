@@ -16,7 +16,7 @@
    	 	die('Could not connect: ' . mysql_error());
 	}
 
-	$result = mysql_query('SELECT id, username WHERE isOnline = 1');
+	$result = mysql_query('SELECT id, username FROM user WHERE isOnline = 1');
 	
 	if (!$result) {
     	die('Invalid query: ' . mysql_error());
