@@ -21,7 +21,7 @@ $con=mysqli_connect("10.100.26.245","test","testing123","localtalk");
 
 
 $insertint = "select ID from User where email ='".$emailaddy."'";
-echo $insertint;
+//echo $insertint;
 $userIdent = mysqli_query($con,$insertint);
 
 //Writes the information to the database
