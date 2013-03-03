@@ -18,14 +18,13 @@
 
 	if (isset($_GET['lat']))
 	{
-		$userid = $_GET['lat'];
+		$lat = $_GET['lat'];
 	}
 
 	if (isset($_GET['longt']))
 	{
-		$userid = $_GET['longt'];
+		$longt = $_GET['longt'];
 	}
-
 
 	$link = mysql_connect('localhost', $mysql_user, $mysql_password);
 	
@@ -38,19 +37,14 @@
 	if (!$db_selected) {
     	die ('Can\'t use foo : ' . mysql_error());
 	}
-
-	$result = mysql_query("UPDATE user SET lat '$lat', longt = '$longt' WHERE id ='$userid'");
+    
+	$result = mysql_query("UPDATE user SET lat = '$lat', longt = '$longt' WHERE id ='$userid'");
 	
 	if (!$result) {
     	die('Invalid query: ' . mysql_error());
+	} else {
+		echo "{\"userid\":\"".$userid."\"}";
 	}
-
-	while($r = mysql_fetch_assoc($result)) {
-		 $data[] = $r;
-   	}
 	
 	mysql_close($link);
-
-	echo $callback . '('.json_encode($data).')';
-
 ?>
