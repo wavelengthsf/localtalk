@@ -171,10 +171,35 @@
                 <div name="ShowUserID" id="j_44" dsid="ShowUserID" data-role="tiggr_label" class='labelClass mobilelabel6 '>
                     userID
                 </div>
+                <!-- panel_37 -->
+                <div name="panel_37" dsid="panel_37" id="j_45" class=" mobilepanel1">
+                    <form id="Upload" action="http://ec2-50-112-223-94.us-west-2.compute.amazonaws.com/localtalk/uploadphoto.php"
+                    enctype="multipart/form-data" method="post">
+                        <h1>
+                            Upload form
+                        </h1>
+                        <p>
+                            <input type="hidden" name="MAX_FILE_SIZE" value="30000000">
+                        </p>
+                        <p>
+                            <label for="file">
+                                File to upload:
+                            </label>
+                            <input id="file" type="file" name="file">
+                            <input id="userID" type="hidden" value="1" name="userID">
+                        </p>
+                        <p>
+                            <label for="submit">
+                                Press to...
+                            </label>
+                            <input id="submit" type="submit" name="submit" value="Upload me!">
+                        </p>
+                    </form>
+                </div>
             </div>
             <!-- mobilefooter1 -->
             <div data-role="footer" data-position="fixed" class="mobileFooter mobilefooter2"
-            name="mobilefooter1" dsid="mobilefooter1" id="j_45" data-theme="b">
+            name="mobilefooter1" dsid="mobilefooter1" id="j_46" data-theme="b">
             </div>
         </div>
     </body>

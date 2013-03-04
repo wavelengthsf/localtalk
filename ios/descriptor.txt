@@ -65,7 +65,7 @@
     <ipa>
       <profile assetId="0"/>
       <settings>
-        <application icon="0" name="LocalTalk" bundleId="" version="" build=""/>
+        <application icon="0" name="LocalTalk" bundleId="com.intalex.localtalk" version="1" build="1.1"/>
         <ios-keys>
           <key>
             <name>MKDirectionsApplicationSupportedModes</name>
@@ -159,21 +159,21 @@
     </ipa>
   </module>
   <variables>
-    <item>CurrentPhoto</item>
     <item>curtopics</item>
   </variables>
   <properties>
-    <property name="iosPushCertificatePassword" value=""/>
     <property name="androidApiKey" value=""/>
+    <property name="iosPushCertificatePassword" value=""/>
     <property name="pushBadge" value="false"/>
-    <property name="pushAlert" value="false"/>
     <property name="theme" value="jqm"/>
-    <property name="androidSenderId" value=""/>
     <property name="showInMobileFrame" value="true"/>
-    <property name="iosPushCertificateAssetId" value=""/>
     <property name="usePushNotification" value="false"/>
-    <property name="swatch" value="b"/>
+    <property name="iosPushCertificateAssetId" value=""/>
     <property name="iosPushProduction" value="false"/>
+    <property name="swatch" value="b"/>
     <property name="pushSound" value="false"/>
+    <property name="pushAlert" value="false"/>
+    <property name="androidSenderId" value=""/>
+    <property name="setPublic" value="true"/>
   </properties>
 </projectDescriptor>
