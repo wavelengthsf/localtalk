@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            Home
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"
+        />
+        <link href="files/resources/lib/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="files/resources/lib/jquerymobile/1.2.0/jquery.mobile.structure-1.2.0.min.css"
+        rel="stylesheet" />
+        <script type="text/javascript" src="files/resources/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-1.8.2.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.indexOf("Android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+            });
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquerymobile/1.2.0/jquery.mobile-1.2.0.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jsonpath.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery-ui-map/jquery.ui.map.full.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/tiggzi.js">
+        </script>
+        <link href="files/resources/css/mobilebase.css" rel="stylesheet" type="text/css"
+        />
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                if (navigator.userAgent.match(/iP/i))
+        {
+            $(window).bind('orientationchange', function(event)
+            {
+                $('meta[name="viewport"]').attr('content', 'initial-scale=1.0,maximum-scale=1.0, ' + ((window.orientation == 90 || window.orientation == -90 || window.orientation == 270) ? "height=device-width,width=device-height" : "height=device-height,width=device-width"));
+            }).trigger('orientationchange');
+        }
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="Home" id="j_52" class="type-interior"
+        data-theme="b" data-add-back-btn="false" data-back-btn-text="Back">
+            <div data-role="header" data-position="fixed" data-theme="b" name="mobileheader"
+            id="j_54" class='mobileHeader mobileheader3 '>
+                <h1 dsid="mobileheader">
+                    LocalTalk
+                </h1>
+                <!-- mobilebutton1_40 -->
+                <a data-role="button" name="mobilebutton1_40" dsid="mobilebutton1_40" class='ui-btn-right  button mobilebutton6'
+                id='j_55' data-corners='true' data-inline='true' data-mini='true' data-theme="b"
+                tabIndex="1">
+                Logout
+                </a>
+            </div>
+            <!-- mobilecontainer -->
+            <div data-role="content" id="j_56" name="mobilecontainer" class="mobileContent mobilecontainer3"
+            dsid="mobilecontainer" data-theme=''>
+                <link href="Home.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="Home.js">
+                </script>
+                <!-- mobilelabel1_33 -->
+                <div name="mobilelabel1_33" id="j_60" dsid="mobilelabel1_33" data-role="tiggr_label"
+                class='labelClass mobilelabel8 '>
+                    Online Users
+                </div>
+                <!-- mobilegrid_41 -->
+                <div class="mobilegrid6_wrapper">
+                    <table id="j_61" class="mobilegrid mobilegrid6" dsid="mobilegrid_41" name="mobilegrid_41"
+                    cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="mobilegrid6_row_0">
+                            <!-- mobilegridcell_42 -->
+                            <td id="j_62" name="mobilegridcell_42" class="mobilegridcell13" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- ShowName -->
+                                    <div name="ShowName" id="j_63" dsid="ShowName" data-role="tiggr_label" class='labelClass mobilelabel9 '>
+                                        username
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_43 -->
+                            <td id="j_64" name="mobilegridcell_43" class="mobilegridcell14" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- showingUserID -->
+                                    <div name="showingUserID" id="j_65" dsid="showingUserID" data-role="tiggr_label"
+                                    class='labelClass mobilelabel10 '>
+                                        showid
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_46 -->
+                            <td id="j_66" name="mobilegridcell_46" class="mobilegridcell15" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilebutton1_48 -->
+                                    <a data-role="button" name="mobilebutton1_48" dsid="mobilebutton1_48" class=' button mobilebutton7'
+                                    style='min-height:20px; ' id='j_67' data-corners='true' data-icon='plus' data-iconpos='left'
+                                    data-mini='true' data-theme="b" tabIndex="3">
+                                    &nbsp;
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- mobilelabel1_6 -->
+                <div name="mobilelabel1_6" id="j_57" dsid="mobilelabel1_6" data-role="tiggr_label"
+                class='labelClass mobilelabel7 '>
+                    Where we see you:
+                </div>
+                <!-- googlemap1_7 -->
+                <div id='j_58' dsid="googlemap1_7" name="googlemap1_7" tiggzitype="object" class=' googlemap1'
+                style='width:100%;'>
+                    <img class=' googlemap1' src="http://assets1.geocommons.com/d51ab1366bec6a2c4954db979e5921bd4cc140db/images/no_preview_map.png?1311276822"
+                    />
+                </div>
+                <ul data-role="listview" id="j_58_markers" name="googlemap1_7_markers" dsid="googlemap1_7_markers"
+                style="display:none">
+                    <!-- marker1_8 -->
+                    <li id="j_59" name="marker1_8" dsid="marker1_8" tiggzitype="marker" rendered="false">
+                        <div id="j_59_infoWindow" name="marker1_8_infoWindowContent" class='marker1'>
+                        </div>
+                    </li>
+                </ul>
+                <!-- mobilebutton1_49 -->
+                <a data-role="button" name="mobilebutton1_49" dsid="mobilebutton1_49" class=' button mobilebutton8'
+                id='j_68' data-corners='true' data-mini='false' data-theme="b" tabIndex="4">
+                send location
+                </a>
+            </div>
+            <!-- mobilefooter1 -->
+            <div data-role="footer" data-position="fixed" class="mobileFooter mobilefooter3"
+            name="mobilefooter1" dsid="mobilefooter1" id="j_69" data-theme="b">
+                <!-- mobilenavbar2_2 -->
+                <div data-role="navbar" id="j_70" name="mobilenavbar2_2" dsid="mobilenavbar2_2"
+                class=" mobilenavbar1" data-theme="b" style="position: relative;">
+                    <ul>
+                        <!-- mobilenavbaritem4_3 -->
+                        <li>
+                            <a data-theme='b' class='ui-btn-active' data-icon='star' id="j_71" dsid="mobilenavbaritem4_3"
+                            name="mobilenavbaritem4_3">
+                            Home
+                            </a>
+                        </li>
+                        <!-- mobilenavbaritem4_4 -->
+                        <li>
+                            <a data-theme='b' data-icon='star' id="j_72" dsid="mobilenavbaritem4_4" name="mobilenavbaritem4_4">
+                            Profile
+                            </a>
+                        </li>
+                        <!-- mobilenavbaritem4_5 -->
+                        <li>
+                            <a data-theme='b' data-icon='star' id="j_73" dsid="mobilenavbaritem4_5" name="mobilenavbaritem4_5">
+                            item
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

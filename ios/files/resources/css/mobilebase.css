@@ -1,0 +1,178 @@
+body {
+	overflow: auto;
+}
+
+a {
+    outline: none;
+}
+
+.ui-field-contain {
+    padding: 0;
+    border-bottom-width: 0px;
+}
+.ui-selectmenu {
+    z-index: 1001 !important;
+}
+
+/* Need to match mobilegrid cells min-height in preview to min-height in flex */
+.ui-content .ui-block-a,
+.ui-content .ui-block-b,
+.ui-content .ui-block-c,
+.ui-content .ui-block-d,
+.ui-content .ui-block-e {
+	min-height: 51px !important;
+}
+
+/* Need to let user have a long caption in header */
+.ui-mobile-viewport .ui-header .ui-title {
+	margin-left: 0;
+	margin-right: 0;
+	/*original jquery mobile is ".6em 30% .8em;"*/
+}
+
+/* We set own margins to elements in control groups and we need to discard native jquerymobile's margins */
+.ui-mobile-viewport fieldset.ui-controlgroup {
+	margin: 0;
+}
+
+/* Button && Textarea */
+
+.ui-mobile-viewport .ui-header .ui-btn-right div[class*="mobilebutton"] {
+	text-align: right;
+}
+
+.ui-mobile-viewport textarea.ui-input-text {
+	margin: 0;	
+}
+
+.ui-field-contain input.ui-input-text,
+.ui-field-contain textarea.ui-input-text,
+.ui-field-contain .ui-input-search {
+    width: 100%;
+}
+
+/* Slider */
+
+.ui-field-contain > .ui-input-text.ui-slider-input {
+    width: 50px;
+}
+
+.ui-field-contain div.ui-slider {
+    width: 65%;
+}
+
+/* Flip toggle switch */
+.ui-field-contain .ui-slider.ui-slider-switch {
+    width: 5.8em;
+}
+
+/* Select */
+
+.ui-field-contain .ui-select {
+    width: 100%;
+}
+
+.ui-mobile-viewport .ui-footer .ui-body {
+	clear: none;	
+}
+
+.ui-mobile-viewport .ui-header div.ui-navbar,
+.ui-mobile-viewport .ui-footer div.ui-navbar  {
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+}
+
+/* Listview */
+
+h3.ui-li-heading {
+	margin: 0;
+}
+
+li.ui-li.tgz-cg-has-thumbnail h3.ui-li-heading {
+	margin-top: 20px;
+}
+
+/* Ajax busy indicator */
+
+#ajaxBusy {
+	display: none;
+	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 999999999;
+	opacity: 0.5;
+	background-color: #EEEEEE;
+}
+	
+#ajaxBusy img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.ui-li.ui-screen-hidden {
+   display: none !important;
+}
+
+/* Native jqm loader is hidden, 'cos we are using our own Ajax Busy Indicator */
+
+div.ui-loader {
+	display:none !important;
+}
+
+/* see ETST-7646 */
+@media all and (min-width: 450px) {
+    .ui-mobile-viewport .ui-field-contain .ui-controlgroup-controls { display: block; width: auto;}
+}
+
+/* Prevent footer disappearing when $.mobile.changePage uses */
+/*[data-role="footer"].ui-fixed-hidden,[data-role="header"].ui-fixed-hidden {*/
+	/*position : fixed!important;*/
+/*}*/
+
+/* ETST-7531 */
+.ui-btn-inner {
+    /* we need it because if width is less than 1em "text-overflow: ellipsis;" works like "text-overflow: clip;"*/
+    min-width: 1em; /* original value is 0.75em */
+}
+.ui-btn-text {
+    /* we need it to make existing "width: 100%;" work */
+    display: inline-block; /* original value is inline by default */
+    /* just to make "text-overflow: ellipsis;" work */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ETST-7532 */
+.ui-icon.ui-icon-none {
+    background: none;
+    background-image: none;
+}
+
+.ui-icon-shadow.ui-icon-none {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+ul[data-role="listview"] li {
+	min-height: 20px;
+}
+
+.tiggzi-mobiletemplate {
+    background-color: transparent;
+    padding:0px;
+}

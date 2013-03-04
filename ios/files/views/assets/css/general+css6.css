@@ -1,0 +1,132 @@
+
+/*  
+* "Common properties" CSS file
+*/
+
+.ui-btn-active {border: 1px solid #4d8cb3;background: #4d8cb3;font-weight: bold;color: #ffffff;cursor: pointer;text-shadow: 0 -1px 1px #444444;text-decoration: none;background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#549ac4),color-stop(1,#457ea1));font-family: Arial, sans-serif;}.ui-btn-active a.ui-link-inherit {color: #ffffff;}.ui-shadow {box-shadow: 0px 1px 2px rgba(0,0,0,0.5);}
+
+
+.ui-corner-tl {
+	-moz-border-radius-topleft: 0.3em;
+	-webkit-border-top-left-radius: 0.3em;
+	border-top-left-radius: 0.3em;
+}
+.ui-corner-tr {
+	-moz-border-radius-topright: 0.3em;
+	-webkit-border-top-right-radius: 0.3em;
+	border-top-right-radius: 0.3em;
+}
+.ui-corner-bl {
+	-moz-border-radius-bottomleft: 0.3em;
+	-webkit-border-bottom-left-radius: 0.3em;
+	border-bottom-left-radius:  0.3em;
+}
+.ui-corner-br {
+	-moz-border-radius-bottomright: 0.3em;
+	-webkit-border-bottom-right-radius: 0.3em;
+	border-bottom-right-radius: 0.3em;;
+}
+.ui-corner-top {
+	-moz-border-radius-topleft: 0.3em;
+	-webkit-border-top-left-radius: 0.3em;
+	border-top-left-radius: 0.3em;
+	-moz-border-radius-topright: 0.3em;
+	-webkit-border-top-right-radius: 0.3em;
+	border-top-right-radius: 0.3em;
+}
+.ui-corner-bottom {
+	-moz-border-radius-bottomleft: 0.3em;
+	-webkit-border-bottom-left-radius: 0.3em;
+	border-bottom-left-radius: 0.3em;
+	-moz-border-radius-bottomright: 0.3em;
+	-webkit-border-bottom-right-radius: 0.3em;
+	border-bottom-right-radius: 0.3em;
+}
+.ui-corner-right {
+	 -moz-border-radius-topright: 0.3em;
+	-webkit-border-top-right-radius: 0.3em;
+	border-top-right-radius: 0.3em;
+	-moz-border-radius-bottomright: 0.3em;
+	-webkit-border-bottom-right-radius: 0.3em;
+	border-bottom-right-radius: 0.3em;
+}
+.ui-corner-left {
+	-moz-border-radius-topleft: 0.3em;
+	-webkit-border-top-left-radius: 0.3em;
+	border-top-left-radius: 0.3em;
+	-moz-border-radius-bottomleft: 0.3em;
+	-webkit-border-bottom-left-radius: 0.3em;
+	border-bottom-left-radius: 0.3em;
+}
+.ui-corner-all {
+	-moz-border-radius: 0.3em 0.3em 0.3em 0.3em;
+	-webkit-border-radius: 0.3em 0.3em 0.3em 0.3em;
+	border-radius: 0.3em 0.3em 0.3em 0.3em; 
+}
+.ui-btn-corner-tl {
+	-moz-border-radius-topleft: 0.5em;
+	-webkit-border-top-left-radius: 0.5em;
+	border-top-left-radius: 0.5em;
+}
+.ui-btn-corner-tr {
+	-moz-border-radius-topright: 0.5em;
+	-webkit-border-top-right-radius: 0.5em;
+	border-top-right-radius: 0.5em;
+}
+.ui-btn-corner-bl {
+	-moz-border-radius-bottomleft: 0.5em;
+	-webkit-border-bottom-left-radius: 0.5em;
+	border-bottom-left-radius:  0.5em;
+}
+.ui-btn-corner-br {
+	-moz-border-radius-bottomright: 0.5em;
+	-webkit-border-bottom-right-radius: 0.5em;
+	border-bottom-right-radius: 0.5em;;
+}
+.ui-btn-corner-top {
+	-moz-border-radius-topleft: 0.5em;
+	-webkit-border-top-left-radius: 0.5em;
+	border-top-left-radius: 0.5em;
+	-moz-border-radius-topright: 0.5em;
+	-webkit-border-top-right-radius: 0.5em;
+	border-top-right-radius: 0.5em;
+}
+.ui-btn-corner-bottom {
+	-moz-border-radius-bottomleft: 0.5em;
+	-webkit-border-bottom-left-radius: 0.5em;
+	border-bottom-left-radius: 0.5em;
+	-moz-border-radius-bottomright: 0.5em;
+	-webkit-border-bottom-right-radius: 0.5em;
+	border-bottom-right-radius: 0.5em;
+}
+.ui-btn-corner-right {
+	 -moz-border-radius-topright: 0.5em;
+	-webkit-border-top-right-radius: 0.5em;
+	border-top-right-radius: 0.5em;
+	-moz-border-radius-bottomright: 0.5em;
+	-webkit-border-bottom-right-radius: 0.5em;
+	border-bottom-right-radius: 0.5em;
+}
+.ui-btn-corner-left {
+	-moz-border-radius-topleft: 0.5em;
+	-webkit-border-top-left-radius: 0.5em;
+	border-top-left-radius: 0.5em;
+	-moz-border-radius-bottomleft: 0.5em;
+	-webkit-border-bottom-left-radius: 0.5em;
+	border-bottom-left-radius: 0.5em;
+}
+.ui-btn-corner-all {
+	-moz-border-radius: 0.5em 0.5em 0.5em 0.5em;
+	-webkit-border-radius: 0.5em 0.5em 0.5em 0.5em;
+	border-radius: 0.5em 0.5em 0.5em 0.5em;
+}
+.ui-checkbox-on .ui-icon,
+.ui-radio-on .ui-icon {
+	background-color: #4d8cb3;    
+}
+	    
+.ui-focus {
+	-moz-box-shadow: 0px 0px 12px #4d8cb3;
+	-webkit-box-shadow: 0px 0px 12px #4d8cb3;
+	box-shadow: 0px 0px 12px #4d8cb3;
+}
