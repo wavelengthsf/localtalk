@@ -64,6 +64,6 @@
 
 	mysql_close($link);
 
-	echo $callback . '('.json_encode($data).')';
+	echo json_encode($data);
 
 ?>
