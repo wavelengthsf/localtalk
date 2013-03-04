@@ -27,17 +27,17 @@
 
 	if (isset($_GET['message']))
 	{
-		$dist = $_GET['message'];
+		$message = $_GET['message'];
 	}
 
 	if (isset($_GET['lat']))
 	{
-		$dist = $_GET['lat'];
+		$lat = $_GET['lat'];
 	}
 
 	if (isset($_GET['longt']))
 	{
-		$dist = $_GET['longt'];
+		$longt = $_GET['longt'];
 	}
 
 	$link = mysql_connect('ec2-50-112-223-94.us-west-2.compute.amazonaws.com', $mysql_user, $mysql_password);
