@@ -37,9 +37,11 @@
 	while($r = mysql_fetch_assoc($result)) {
 		 $data[] = $r;
    	}
-	
+//echo $dynaqry2;
+
 	mysql_close($link);
 
-	echo $callback . '('.json_encode($data).')';
+	//echo $callback . '('.json_encode($data).')';
+echo json_encode($data);
 
 ?>
