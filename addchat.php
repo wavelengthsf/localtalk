@@ -76,6 +76,7 @@
 		 $orig_longt = $r['longt'];
    	}
 
+   	echo $query;
    	// find circle from user's lat/long and return all results from the user table in that circle
 	$query = "SELECT *, 3956 * 2 * ASIN(SQRT( POWER(SIN(('$orig_lat' -abs(dest.lat)) * pi()/180 / 2),2) + COS('$orig_lat' * pi()/180 ) * COS( abs(dest.lat) *  pi()/180) * POWER(SIN(('$orig_longt' - dest.longt) *  pi()/180 / 2), 2) )) as distance FROM chat dest, user u WHERE dest.userID = u.id having distance < '$dist' ORDER BY distance";
 
