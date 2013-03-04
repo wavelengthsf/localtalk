@@ -19,11 +19,14 @@
 	if (isset($_GET['lat']))
 	{
 		$lat = $_GET['lat'];
+		echo "<br> Got latitude of: " . $lat;
 	}
 
 	if (isset($_GET['longt']))
 	{
 		$longt = $_GET['longt'];
+				echo "<br> Got longitude of: " . $longt;
+
 	}
 
 	$link = mysql_connect('ec2-50-112-223-94.us-west-2.compute.amazonaws.com', $mysql_user, $mysql_password);
