@@ -40,13 +40,20 @@ while($row = mysqli_fetch_array($userIdent))
   {
   //echo "<br> ID:".$row['interestid'];
   $UID= $row['ID'];
-  //ho "<br> ID:".$row['interestid'];
-  //echo "<br />";
   }
 
-//$dynaqry2 = "INSERT INTO `interests` (userID,interestID) values('".$userid."','".$topicid1."')";
+if ($UID==0)
+  {
+  $dynaqry3 = "INSERT INTO `log` (log) values('User auth:".$emailaddy." and returned FAILED')";
 //echo $dynaqry2;
-//$insert2 = mysqli_query($con,$dynaqry2);
+$insert3 = mysqli_query($con,$dynaqry3);
+
+		    	die('"{\"result\":\"failure\"}"');
+		
+  }
+$dynaqry2 = "INSERT INTO `log` (log) values('User auth:".$emailaddy." and returned ".$UID."')";
+//echo $dynaqry2;
+$insert2 = mysqli_query($con,$dynaqry2);
 
 
   //mysql_query("INSERT INTO `interests` VALUES ('$userid','$topicid1')") ;
@@ -59,7 +66,18 @@ while($row = mysqli_fetch_array($userIdent))
 //$data = "Success";
 
 
+if ($UID==0)
+  {
+		echo "{\"result\":\"failure\"}";
+		  $dynaqry3 = "INSERT INTO `log` (log) values('User auth:".$emailaddy." and returned FAILED')";
+//echo $dynaqry2;
+$insert3 = mysqli_query($con,$dynaqry3);
+  }
+else
+  {
 echo "{\"uid\":\"".$UID."\"}";
+  }
+
 
  
  mysqli_close($con);

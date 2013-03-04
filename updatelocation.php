@@ -19,13 +19,13 @@
 	if (isset($_GET['lat']))
 	{
 		$lat = $_GET['lat'];
-		echo "<br> Got latitude of: " . $lat;
+	//	echo "<br> Got latitude of: " . $lat;
 	}
 
 	if (isset($_GET['longt']))
 	{
 		$longt = $_GET['longt'];
-				echo "<br> Got longitude of: " . $longt;
+				//echo "<br> Got longitude of: " . $longt;
 
 	}
 
@@ -44,10 +44,17 @@
 	$result = mysql_query("UPDATE user SET lat = '$lat', longt = '$longt' WHERE id ='$userid'");
 	
 	if (!$result) {
+			echo "{\"result\":\"failure\"}";
+
     	die('Invalid query: ' . mysql_error());
 	} else {
-		echo "{\"userid\":\"".$userid."\"}";
+			$localstring = "Lat: " . $lat . " Long: " . $longt . " UID: " . $userid;
+			$result2 = mysql_query("insert log (log) values ('$localstring');");
+		echo "{\"result\":\"success\"}";
 	}
+	
+
+
 	
 	mysql_close($link);
 ?>
